@@ -1,0 +1,23 @@
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color: #000;
+}
+nav li a{
+    color:#fff;
+}
+nav li{
+    display:inline-block;
+    margin: 0 15px;
+}
+nav li svg{
+    margin-right: 5px;
+}
+nav li a{
+    text-decoration: none;
+}
+nav li a:hover{
+    text-decoration:underline;
+}
