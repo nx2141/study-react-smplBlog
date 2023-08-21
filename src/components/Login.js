@@ -1,9 +1,27 @@
-import React from 'react'
+import { signInWithPopup } from "firebase/auth";
+import React from "react";
+import {auth, provider} from "../firebase";
+import { useNavigate } from "react-router-dom";
 
-function Login() {
+
+
+const Login = ({setIsAuth}) => {
+  const navigate = useNavigate();
+  const loginInWithGoogle = () => {
+    //Googleでログイン
+    signInWithPopup(auth,provider).then((result)=>{
+      // console.log(result);
+      localStorage.setItem("isAuth",true);
+      setIsAuth(true);
+      navigate("/");
+    })
+  };
   return (
-    <div>Login</div>
-  )
-}
+    <div>
+      <p>ログインして始める</p>
+      <button onClick={loginInWithGoogle}>Googleでログイン</button>
+    </div>
+  );
+};
 
-export default Login
+export default Login;
