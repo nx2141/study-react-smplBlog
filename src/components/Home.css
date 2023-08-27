@@ -1,14 +1,15 @@
 .homePage {
   width: 100%;
-  height: calc(100vh - 80px);
-  height: auto;
+  height: calc(100vh - 90px);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  box-sizing: border-box;
 }
 .postContents {
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
   height: auto;
   max-height: 600px;
   background-color: white;
@@ -16,7 +17,8 @@
   box-sizing: border-box;
   padding: 30px;
   border-radius: 10px;
-  margin: 20px;
+  margin: 20px 0;
+  box-sizing: border-box;
 }
 .postHeader h1 {
   margin: 0;
